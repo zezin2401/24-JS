@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var faixas = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var venda= [];
+        var vendas;
+        while (true) {
+            vendas = parseFloat(prompt("Digite as vendas do vendedor (ou -1 para encerrar):"));
+            if (vendas === -1) break;
+                var basesalario = 200;
+            var comissao = 0.09 * vendas;
+            var salario = basesalario + comissao;
+            var faixa;
+            if (salario < 200) {
+                faixa = -1;
+            } else {
+                faixa = Math.min(Math.floor((salario - 200) / 100), 8);
+            }
+            if (faixa >= 0) faixas[faixa]++;
+        }
+        alert(faixas[0]);
+        alert(faixas[1]);
+        alert(faixas[2]);
+        alert(faixas[3]);
+        alert(faixas[4]);
+        alert(faixas[5]);
+        alert(faixas[6]);
+        alert(faixas[7]);
+        alert(faixas[8]);
+    </script>
+</body>
+</html>

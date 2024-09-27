@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var notas = [];
+        var nota;
+        while (true) {
+            nota = parseFloat(prompt("Digite a nota (-1 para parar):"));
+            if (isNaN(nota)) {
+                alert("Digite outro ");
+                continue;
+            }
+            if (nota === -1) {
+                break;
+            }
+            notas.push(nota);
+        }
+        var quantidade = notas.length;
+        alert(quantidade);
+        alert(notas.join(", "));
+        var valoresInvertidos = notas.slice().reverse();
+        alert(valoresInvertidos.join("\n"));
+        var soma = 0;
+        for (var i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+        var media = notas.length > 0 ? soma / notas.length : 0;
+        alert(soma);
+        alert(media);
+        var acimaamedia = 0;
+        for (var i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                acimaamedia++;
+            }
+        }
+        alert(acimaaMedia);
+        var menorsete = 0;
+        for (var i = 0; i < notas.length; i++) {
+            if (notas[i] < 7) {
+                menorsete++;
+            }
+        }
+        alert(quantidadeAbaixoSete);
+    </script>
+</body>
+</html>

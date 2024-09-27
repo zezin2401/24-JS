@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var temperaturas = [];
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        for (var i = 0; i < 12; i++) {
+            var temperatura = parseFloat(prompt("Temperatura de " + meses[i] + ":"));
+            temperaturas.push(temperatura);
+        }
+        var somaTemperaturas = 0;
+        for (var i = 0; i < temperaturas.length; i++) {
+            somaTemperaturas += temperaturas[i];
+        }
+        var mediaAnual = somaTemperaturas / temperaturas.length;
+        var acimamedia = "Temperaturas acima da média:\n";
+        for (var i = 0; i < temperaturas.length; i++) {
+            if (temperaturas[i] > mediaAnual) {
+                acimamedia += meses[i] + ": " + temperaturas[i] + "°C\n";
+            }
+        }
+        alert(resultado);
+    </script>
+</body>
+</html>

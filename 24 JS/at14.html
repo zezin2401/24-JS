@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var resposta = [];
+        var pergunta = [
+            "Telefonou para a vítima?",
+            "Esteve no local do crime?",
+            "Mora perto da vítima?",
+            "Devia para a vítima?",
+            "Já trabalhou com a vítima?"
+        ];
+        for (var i = 0; i < pergunta.length; i++) {
+            var respostas = prompt(pergunta[i] + " (sim ou não):");
+            resposta.push(respostas.toLowerCase());
+        }
+        var sim = 0;
+        for (var i = 0; i < resposta.length; i++) {
+            if (resposta[i] === 'sim') {
+                countSim++;
+            }
+        }
+        var classificacao;
+        if (sim === 5) {
+            classificacao = "Assassino";
+        } else if (sim >= 3) {
+            classificacao = "Cúmplice";
+        } else if (sim === 2) {
+            classificacao = "Suspeita";
+        } else {
+            classificacao = "Inocente";
+        }
+    alert(classificacao);
+    </script>
+</body>
+</html>

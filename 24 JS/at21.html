@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+        <script>
+            var modelos = ['Fusca', 'Gol', 'Uno', 'Vectra', 'Peugeot'];
+            var consumos = [7, 10, 12.5, 9, 14.5];
+            var precoGasolina = 2.25;
+            var distancia = 1000;
+            var modeloMaisEconomico = '';
+            var consumoMaisEficiente = Infinity;
+            var relatorios = [];
+            for (var i = 0; i < modelos.length; i++) {
+                var modelo = modelos[i];
+                var consumo = consumos[i];
+                var litros = distancia / consumo;
+                var custo = litros * precoGasolina;
+                if (consumo < consumoMaisEficiente) {
+                    consumoMaisEficiente = consumo;
+                    modeloMaisEconomico = modelo;
+                }
+                relatorios.push((i + 1) + ' - ' + modelo.toLowerCase() + ' - ' + consumo.toFixed(1) + ' - ' + litros.toFixed(1) + ' litros - R$ ' + custo.toFixed(2));
+            }
+            var resultado = 'consumo de combustível\n';
+            resultado += 'Relatório \n';
+            resultado += relatorios.join('\n') + '\n';
+            resultado += modeloMaisEconomico.toLowerCase() + '.';
+            alert(resultado);
+        </script>
+</body>
+</html>

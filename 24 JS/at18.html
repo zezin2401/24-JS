@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var votos = [];
+        for (var i = 0; i < 24; i++) {
+            votos[i] = 0;
+        }
+        var votostotal = 0;
+        while (true) {
+            var numero = parseInt(prompt("Número do jogador (0=fim):"));
+            if (numero === 0) break;
+            if (numero < 1 || numero > 23) {
+                alert("Informe um valor entre 1 e 23 ou 0 para sair!");
+                continue;
+            }
+            votos[numero]++;
+            votostotal++;
+        }
+        var jogadormelhor = 0;
+        var maxvotos = 0;
+        var resultado = "Resultado da votação:\n";
+        resultado += "Foram computados " + votostotal + " votos.\n";
+        for (var i = 1; i <= 23; i++) {
+            if (votos[i] > 0) {
+                var percentual = (votos[i] / votostotal * 100).toFixed(1);
+                resultado += "Jogador " + i + " " + votos[i] + " " + percentual + "%\n";
+                if (votos[i] > maxvotos) {
+                    jogadormelhor = i;
+                    maxvotos = votos[i];
+                }
+            }
+        }
+        var percentualmelho = (maxVotos / votostotal * 100).toFixed(1);
+        resultado += jogadormelhor + maxVotos + percentualmelho + "%";
+        alert(resultado);
+    </script>
+</body>
+</html>

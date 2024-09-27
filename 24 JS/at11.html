@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var vetor = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+        var vetor2 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+        var vetor3 = [7]
+        var vetor4 = []
+        for(posicao in vetor){
+            vetor4.push(vetor[posicao])
+            vetor4.push(vetor2[posicao])
+            vetor4.push(vetor3[posicao])
+         }
+        alert(vetor4)
+        
+    </script>
+</body>
+</html>

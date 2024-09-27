@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var idades = [12, 14, 11, 15, 10, 13, 16, 12, 11, 17, 15, 14, 13, 12, 18, 11, 16, 15, 14, 13, 17, 12, 13, 15, 14, 11, 13, 16, 10, 18];
+        var alturas = [140, 155, 130, 160, 145, 150, 170, 155, 140, 155, 160, 155, 150, 145, 175, 140, 165, 160, 155, 150, 170, 145, 160, 165, 150, 140, 155, 170, 145, 180];
+        var soma = 0
+        media = 0
+        aluno = 0
+        
+        for (posicao in alturas) {
+            soma = alturas[posicao] + soma
+        }
+        media = soma/30
+        for (posicao in idades) {
+            if (idades[posicao] > 13){
+                if(alturas[posicao] < media) {
+                    aluno = aluno + 1
+                }
+            }
+            
+        }
+        alert(aluno)
+    </script>
+</body>
+</html>

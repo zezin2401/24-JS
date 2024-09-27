@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var aluno1 = [2.5, 5.0, 9.0, 7, 5]
+        var aluno2 = [7.0, 3.5, 8.0, 1.0]
+        var aluno3 = [8.0, 5.5, 8.5, 9.0]
+        var aluno4 = [8.0, 3.5, 8.5, 4.5]
+        var aluno5 = [9.0, 9.5, 9.0, 8.5]
+        var aluno6 = [7.0, 5.5, 6.5, 7.0]
+        var aluno7 = [5.0, 6.5, 4.5, 4.0]
+        var aluno8 = [7.2, 8.5, 8.0, 7.0]
+        var aluno9 = [9.0, 9.0, 9.5, 9.0]
+        var aluno10 = [7.5, 7.0, 7.5, 8.0]
+        var media = []
+        var soma = 0
+        for (posicao in aluno1) {
+            soma = soma + aluno1[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno2) {
+            soma = soma + aluno2[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno3) {
+            soma = soma + aluno3[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno4) {
+            soma = soma + aluno4[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno5) {
+            soma = soma + aluno5[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno6) {
+            soma = soma + aluno6[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno7) {
+            soma = soma + aluno7[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno8) {
+            soma = soma + aluno8[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno9) {
+            soma = soma + aluno9[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        for (posicao in aluno10) {
+            soma = soma + aluno10[posicao]
+        }
+        media.push(soma / 4)
+        soma = 0
+        var numAlunos = 0
+        for (posicao in media) {
+            if (media[posicao] >= 7) {
+                numAlunos = numAlunos + 1
+            }
+        }
+        alert("A média de notas dos 10 alunos é de: " +numAlunos)
+    </script>
+</body>
+</html>

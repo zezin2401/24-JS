@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var vetor = [8, 12, 19, 3, 15, 22, 8, 11, 24, 5]
+        var quadrado = []
+        soma = 0
+       for (posicao in vetor) {
+         quadrado.push(vetor[posicao] ** 2 ) 
+       }
+       for (posicao in quadrado) {
+        soma = quadrado[posicao] + soma
+       }
+       alert(soma)
+        
+    </script>
+</body>
+</html>
